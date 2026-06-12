@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valery Güere Solorzano | Marketing Digital, Retail & Analytics</title>
+    <meta
+      name="description"
+      content="Portafolio profesional basado en perfil de Marketing Digital, Gestión Comercial, Retail y Analytics."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-elevated="false">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">VG</span>
+        <span>Valery Güere Solorzano</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Portafolio Marketing / Retail / Analytics</p>
+          <h1>Valery Güere Solorzano</h1>
+          <p class="role">Marketing Digital | Gestión Comercial | Retail Analytics</p>
+          <p class="hero-copy">Conecto creatividad, ventas y datos para impulsar negocios</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#proyectos">Ver proyectos</a>
+            <a class="button button-secondary" href="assets/cv-valery-guere-solorzano.pdf" download>Descargar CV</a>
+            <a class="button button-ghost" href="#contacto">Contactar</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Resumen ejecutivo">
+          <div>
+            <span class="metric-value">+32%</span>
+            <span class="metric-label">mejora simulada en visibilidad digital</span>
+          </div>
+          <div>
+            <span class="metric-value">5</span>
+            <span class="metric-label">casos de uso de marketing, retail y BI</span>
+          </div>
+          <div>
+            <span class="metric-value">8</span>
+            <span class="metric-label">competencias clave del perfil profesional</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="sobre-mi" class="section about-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Perfil profesional</p>
+          <h2>Sobre mí</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-copy reveal">
+            <p>
+              Soy Bachiller en Publicidad y Marketing Digital, con formación en investigación de
+              mercado, redacción publicitaria y análisis de resultados aplicados a campañas,
+              marcas y proyectos digitales.
+            </p>
+            <p>
+              Cuento con experiencia en gestión de contenido digital, diseño de materiales,
+              difusión de productos, operaciones comerciales, atención al cliente y seguimiento de
+              métricas. Me interesa seguir desarrollándome en marketing digital, gestión comercial
+              y análisis de datos.
+            </p>
+          </article>
+
+          <div class="profile-stats reveal">
+            <div class="stat-card">
+              <strong>24h</strong>
+              <span>ciclo simulado de reportes comerciales</span>
+            </div>
+            <div class="stat-card">
+              <strong>8.7M</strong>
+              <span>interacciones simuladas en canales digitales</span>
+            </div>
+            <div class="stat-card">
+              <strong>96%</strong>
+              <span>satisfacción estimada en atención omnicanal</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="section skills-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Stack técnico</p>
+          <h2>Habilidades</h2>
+        </div>
+        <div class="skills-grid reveal" aria-label="Lista de habilidades"></div>
+      </section>
+
+      <section id="proyectos" class="section projects-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Casos ficticios realistas</p>
+          <h2>Proyectos destacados</h2>
+        </div>
+
+        <div class="project-toolbar reveal">
+          <div class="filter-group" aria-label="Filtrar proyectos por especialidad">
+            <button class="filter-button active" type="button" data-filter="all">Todos</button>
+            <button class="filter-button" type="button" data-filter="BI">BI</button>
+            <button class="filter-button" type="button" data-filter="Clientes">Clientes</button>
+            <button class="filter-button" type="button" data-filter="Retail">Retail</button>
+            <button class="filter-button" type="button" data-filter="Marketing">Marketing</button>
+            <button class="filter-button" type="button" data-filter="Contenido">Contenido</button>
+          </div>
+          <select id="projectSelector" aria-label="Cambiar dashboard activo"></select>
+        </div>
+
+        <div class="dashboard-shell reveal">
+          <div class="dashboard-header">
+            <div>
+              <p class="eyebrow">Dashboard interactivo</p>
+              <h3 id="activeProjectTitle"></h3>
+            </div>
+            <div id="activeProjectTools" class="tool-tags"></div>
+          </div>
+          <div id="activeProjectDetail" class="dashboard-detail"></div>
+        </div>
+
+        <div id="projectCards" class="project-cards"></div>
+      </section>
+
+      <section id="contacto" class="section contact-section">
+        <div class="contact-panel reveal">
+          <div>
+            <p class="eyebrow">Disponible para proyectos</p>
+            <h2>Construyamos decisiones con datos</h2>
+            <p>
+              Portafolio demostrativo listo para adaptar con campañas reales, catálogos digitales,
+              dashboards de Power BI, CV profesional y métricas verificables.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:guerevalery@gmail.com">Enviar correo</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/valery-guere" target="_blank" rel="noreferrer">Ver LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Valery Güere Solorzano</span>
+      <span>Portfolio basado en PDF de LinkedIn, con dashboards y datos dummy.</span>
+    </footer>
+
+    <div id="chartTooltip" class="chart-tooltip" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
