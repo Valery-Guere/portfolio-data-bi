@@ -266,6 +266,12 @@ h3 {
   border-color: var(--line);
 }
 
+.button-whatsapp {
+  background: #18a957;
+  color: white;
+  box-shadow: 0 12px 24px rgba(24, 169, 87, 0.2);
+}
+
 .button-ghost {
   background: rgba(255, 255, 255, 0.45);
   color: var(--blue-900);
