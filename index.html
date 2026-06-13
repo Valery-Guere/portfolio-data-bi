@@ -234,18 +234,39 @@
 
       <section id="contacto" class="section contact-section">
         <div class="contact-panel reveal">
-          <div>
+          <div class="contact-copy">
             <p class="eyebrow">Disponible para proyectos</p>
             <h2>Impulsemos tu marca con contenido, orden comercial y datos</h2>
             <p>
               Portafolio demostrativo listo para adaptar con campañas reales, catálogos digitales,
               dashboards de Power BI, CV profesional y métricas verificables.
             </p>
+            <div class="contact-actions">
+              <a class="button button-secondary" href="assets/cv-valery-guere-solorzano.pdf" download>Descargar CV</a>
+              <a class="button button-ghost" href="https://www.linkedin.com/in/valery-guere" target="_blank" rel="noreferrer">Ver LinkedIn</a>
+            </div>
           </div>
-          <div class="contact-actions">
-            <a class="button button-primary" href="mailto:guerevalery@gmail.com">Enviar correo</a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/valery-guere" target="_blank" rel="noreferrer">Ver LinkedIn</a>
-          </div>
+
+          <form id="contactForm" class="contact-form" aria-label="Formulario de contacto">
+            <div class="form-row">
+              <label for="contactName">Nombre</label>
+              <input id="contactName" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-row">
+              <label for="contactEmail">Correo</label>
+              <input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+            </div>
+            <div class="form-row">
+              <label for="contactSubject">Asunto</label>
+              <input id="contactSubject" name="subject" type="text" placeholder="Consulta o propuesta" required />
+            </div>
+            <div class="form-row">
+              <label for="contactMessage">Mensaje</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Cuéntame brevemente en qué puedo ayudarte" required></textarea>
+            </div>
+            <button class="button button-primary" type="submit">Enviar mensaje</button>
+            <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>

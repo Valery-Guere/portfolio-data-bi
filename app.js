@@ -228,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderActiveProject();
   bindNavigation();
   bindFilters();
+  bindContactForm();
   setupReveal();
   window.addEventListener("resize", handleResize);
   window.addEventListener("scroll", updateHeaderElevation, { passive: true });
@@ -780,6 +781,38 @@ function bindNavigation() {
       toggle.setAttribute("aria-expanded", "false");
       document.body.classList.remove("menu-open");
     });
+  });
+}
+
+function bindContactForm() {
+  const form = document.querySelector("#contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const subject = String(data.get("subject") || "Contacto desde landing page").trim();
+    const message = String(data.get("message") || "").trim();
+    const status = document.querySelector("#contactStatus");
+
+    const body = [
+      `Nombre: ${name}`,
+      `Correo: ${email}`,
+      "",
+      "Mensaje:",
+      message,
+      "",
+      "Enviado desde la landing page de Valery Guere Solorzano.",
+    ].join("\n");
+
+    const mailto = `mailto:guerevalery@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    if (status) {
+      status.textContent = "Se abrirá tu aplicación de correo para enviar el mensaje.";
+    }
   });
 }
 

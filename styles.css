@@ -45,7 +45,9 @@ a {
 }
 
 button,
-select {
+select,
+input,
+textarea {
   font: inherit;
 }
 
@@ -885,9 +887,9 @@ canvas {
 }
 
 .contact-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  align-items: start;
   gap: 24px;
   padding: clamp(24px, 4vw, 44px);
 }
@@ -895,6 +897,68 @@ canvas {
 .contact-panel p {
   max-width: 680px;
   color: var(--muted);
+}
+
+.contact-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-copy .contact-actions {
+  margin-top: 8px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(18px, 3vw, 24px);
+  background: #f8fcff;
+}
+
+.form-row {
+  display: grid;
+  gap: 7px;
+}
+
+.form-row label {
+  color: var(--blue-900);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid #cfe0ee;
+  border-radius: 8px;
+  padding: 12px 13px;
+  background: white;
+  color: var(--ink);
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.form-row textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  border-color: var(--blue-500);
+  box-shadow: 0 0 0 4px rgba(29, 138, 216, 0.12);
+}
+
+.form-status {
+  min-height: 20px;
+  margin: 0;
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 800;
 }
 
 .site-footer {
@@ -999,7 +1063,6 @@ canvas {
     grid-template-columns: 1fr;
   }
 
-  .contact-panel,
   .project-toolbar,
   .dashboard-header {
     align-items: stretch;
