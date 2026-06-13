@@ -979,6 +979,41 @@ canvas {
   font-size: 0.9rem;
 }
 
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 999px;
+  background: #18d366;
+  color: white;
+  box-shadow:
+    0 18px 34px rgba(13, 92, 47, 0.28),
+    0 0 0 8px rgba(24, 211, 102, 0.12);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.floating-whatsapp:hover {
+  background: #12bf5a;
+  box-shadow:
+    0 22px 42px rgba(13, 92, 47, 0.34),
+    0 0 0 10px rgba(24, 211, 102, 0.14);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.floating-whatsapp svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
 .chart-tooltip {
   position: fixed;
   z-index: 30;
@@ -1135,5 +1170,17 @@ canvas {
 
   .table-card {
     overflow-x: auto;
+  }
+
+  .floating-whatsapp {
+    right: 18px;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+  }
+
+  .floating-whatsapp svg {
+    width: 31px;
+    height: 31px;
   }
 }
